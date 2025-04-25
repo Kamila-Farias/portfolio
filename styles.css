@@ -1,0 +1,410 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 100%;
+    font-weight: 400;
+}
+
+:root {
+    --primary-color: rgb(255, 255, 255);
+    --secondary-color: #000000;
+    --hover-color: #5C5C5C;
+}
+
+@media (max-width: 992px) {
+    :root {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    :root {
+        font-size: 14px;
+    }
+}
+
+html,
+body {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "neue-haas-grotesk-display", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    background-color: var(--primary-color);
+    color: var(--secondary-color)
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* ========== Grid ========== */
+.container-fluid {
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+@media (max-width: 992px) {
+    .container-fluid {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .container-fluid {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
+.row {
+    --bs--gutter-x: 1rem;
+}
+
+/* ========== Header ========== */
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 5rem;
+    padding: 0 2rem;
+    font-size: 1.25rem;
+    background-color: var(--primary-color);
+    z-index: 10;
+}
+
+@media (max-width: 992px) {
+    header {
+        padding: 0 1.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    header {
+        padding: 0 1rem;
+    }
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header.logo img {
+    display: inline-block;
+    margin-right: 0.5rem;
+    width: 3rem;
+    height: 3rem;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+}
+
+header nav ul li {
+    margin-left: 1.5rem;
+}
+
+header nav ul li a {
+    transition: border 0.4s;
+}
+
+header nav ul li a:hover {
+    border-bottom: 1px solid var(--hover-color);
+}
+
+
+/* ==================== Main ==================== */
+main {
+    margin-top: 10rem;
+    margin-bottom: 8.3rem;
+    min-height: calc(100vh - 11rem);
+    min-height: calc((var(--vh, 1vh) * 100) - 11rem);
+}
+
+@media (max-width: 992px) {
+    main {
+        margin-top: 10rem;
+        margin-bottom: 8.3rem;
+        min-height: calc(100vh - 11rem);
+        min-height: calc((var(--vh, 1vh) * 100) - 11rem);
+    }
+
+    main .single {
+        padding: 1.5rem;
+    }
+}
+
+main .about {
+    padding-top: 2rem 0;
+}
+
+main .single {
+    padding: 2rem;
+}
+
+
+/* ==================== About ==================== */
+
+
+.project-list {
+    padding-top: 1rem !important;
+    scroll-behavior: smooth;
+}
+
+
+@media (max-width: 992px) {
+    .project-list {
+        padding-top: 6rem !important;
+    }
+}
+
+.project-list article {
+    border-top: 0.5px solid var(--hover-color);
+    padding-bottom: 1.4rem;
+    padding-top: 1.25rem;
+    transition: background-color .3s;
+}
+
+
+
+.about-text {
+    padding-top: 5.6rem;
+    scroll-behavior: smooth;
+    font-size: 4rem;
+    line-height: 1.2;
+    padding-bottom: 2rem;
+}
+
+@media(max-width: 992px) {
+    .about-text {
+        font-size: 3rem;
+    }
+}
+
+@media(max-width: 576px) {
+    .about-text {
+        font-size: 2rem;
+    }
+}
+
+
+
+/* ========== Project * List ========== */
+.card{
+    position:relative;
+}
+
+.card:hover .card-image{
+    display: block;
+}
+
+.card-image{
+    display: none;
+    position: absolute;
+    top: -50%;
+    left: 60%;
+    z-index: 1;
+}
+
+.card-image img{
+    width: 20rem;
+    height: auto;
+}
+
+
+.project-title {
+    list-style: none;
+    font-size: 2rem;
+    line-height: 2.4rem;
+}
+
+@media(max-width: 576px) {
+    .project-title {
+        line-height: 2rem;
+        margin-bottom: 1rem;
+    }
+}
+
+.project-category {
+    list-style: none;
+    font-size: 1.25rem;
+    line-height: 1.3rem;
+}
+
+@media(max-width: 992px) {
+    .project-category {
+        line-height: 1.7rem;
+    }
+}
+
+@media(max-width: 576px) {
+    .project-category {
+        line-height: 2.5rem;
+    }
+}
+
+.project-indiome {
+    list-style: none;
+    font-size: 1.25rem;
+    line-height: 1.3rem;
+}
+
+.project-year {
+    list-style: none;
+    font-size: 1.25rem;
+    line-height: 1.3rem;
+    text-align: right;
+}
+
+
+/* ========== About * page ========== */
+
+.about section + section{
+    border-top: 1px solid var(--hover-color);
+    margin-top: 2rem;
+    padding-top: 2rem;
+}
+
+.about-subtitle {
+    list-style: none;
+    font-size: 2rem;
+    line-height: 2.4rem;
+}
+
+@media(max-width: 576px) {
+    .about-subtitle {
+        line-height: 2rem;
+        margin-bottom: 1rem;
+    }
+}
+
+.about-category {
+    list-style: none;
+    font-size: 1.25rem;
+    line-height: 1.7rem;
+}
+
+@media(max-width: 992px) {
+    .about-category {
+        line-height: 1.7rem;
+    }
+}
+
+@media(max-width: 576px) {
+    .about-category {
+        line-height: 2.5rem;
+    }
+}
+
+
+/* ========== Single ========== */
+
+.single-info {
+    position: sticky;
+    top: 10rem;
+}
+
+@media (max-width: 992px) {
+    .single-info {
+        top: 6.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .single-info {
+        position: static;
+    }
+}
+
+.single-title {
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 992px) {
+    .single-title {
+        font-size: 2rem;
+        line-height: 2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .single-title {
+        margin-bottom: 1rem;
+    }
+}
+
+.single-tagline {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.single-text {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+}
+
+@media (max-width: 576px) {
+    .single-text {
+        margin-bottom: 2rem;
+    }
+}
+
+.single-images {
+    list-style: none;
+}
+
+.single-image+.single-image {
+    position: static;
+    margin-top: 1rem;
+    top: 10rem;
+}
+
+.single-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ========== Footer ========== */
+footer {
+    padding: 1.5rem 0;
+    font-size: 1.25rem;
+}
+
+footer .credit {
+    text-align: right;
+    align-items: center;
+    color: var(--hover-color);
+}
+
+@media(max-width: 576px) {
+    footer .col-9 {
+        font-size: 1.25rem;
+    }
+
+    footer {
+        text-align: right;
+    }
+    
+    footer .col-md-5 {
+        text-align: left;
+    }
+
+    footer .credit {
+        text-align: left;
+    }
+}
